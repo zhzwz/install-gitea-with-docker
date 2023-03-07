@@ -20,6 +20,8 @@ sudo yum install docker-ce docker-ce-cli containerd.io docker-buildx-plugin dock
 # 启动
 sudo systemctl start docker
 # 检验
+docker version
+docker compose version
 sudo docker run hello-world
 ```
 
