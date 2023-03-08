@@ -10,18 +10,15 @@ services:
     environment:
       - USER_UID=1000
       - USER_GID=1000
-      - GITEA__APP_NAME=Git
-      - GITEA__database__DB_TYPE=sqlite3
-      - GITEA__server__SSH_DOMAIN=
-      - GITEA__server__DOMAIN=
-      - GITEA__server__ROOT_URL=http://localhost/
-      - GITEA__server__DISABLE_SSH=true # disable ssh
-      - GITEA__server__SSH_PORT= # default value is 22, set empty to disable
+      - GITEA__openid__ENABLE_OPENID_SIGNIN=false
+      - GITEA__openid__ENABLE_OPENID_SIGNUP=false
       - GITEA__i18n__LANGS=zh-CN
       - GITEA__i18n__NAMES=简体中文
       - GITEA__time__FORMAT=RFC1123
       - GITEA__time__DEFAULT_UI_LOCATION=Asia/Shanghai
-      - GITEA__ui__DEFAULT_THEME=gitea # default auto - options: auto, gitea, arc-green
+      - GITEA__ui__DEFAULT_THEME=gitea
+      - GITEA__other__ENABLE_SITEMAP=true
+      - GITEA__other__ENABLE_FEED=true
     networks:
       - gitea
     volumes:
